@@ -6,13 +6,28 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>James Walsh</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Hi, I'm James 🤙
-        </h1>
+        <h1 className={styles.title}>Hi, I'm James 🤙</h1>
 
         <div className={styles.grid}>
           <a href="https://github.com/jimboslicethat" className={styles.card}>
@@ -20,27 +35,21 @@ export default function Home() {
             <p>Find out more about how I collaborate & my pet projects</p>
           </a>
 
-          <a href="https://www.linkedin.com/in/jamesandersonwalsh/" className={styles.card}>
+          <a
+            href="https://www.linkedin.com/in/jamesandersonwalsh/"
+            className={styles.card}>
             <h3>LinkedIn &rarr;</h3>
             <p>My preferred way to share my resume with your team</p>
           </a>
 
-          <a
-            href="https://dev.to/jimboslicethat/"
-            className={styles.card}
-          >
+          <a href="https://dev.to/jimboslicethat/" className={styles.card}>
             <h3>Blog Posts &rarr;</h3>
             <p>Check out my posts on my favorite blog platform, dev.to</p>
           </a>
 
-          <a
-            href="mailto:jamesandersonwalsh@gmail.com"
-            className={styles.card}
-          >
+          <a href="mailto:jamesandersonwalsh@gmail.com" className={styles.card}>
             <h3>Contact Me &rarr;</h3>
-            <p>
-              I'm always an email or direct message away 👍
-            </p>
+            <p>I'm always an email or direct message away 👍</p>
           </a>
         </div>
       </main>
@@ -49,8 +58,7 @@ export default function Home() {
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Deployed with{' '}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
