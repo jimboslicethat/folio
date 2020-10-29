@@ -17,12 +17,12 @@ export default function Home() {
         <div className={styles.grid}>
           <a href="https://github.com/jimboslicethat" className={styles.card}>
             <h3>GitHub &rarr;</h3>
-            <p>Find out more about how I collaborate & my pet projects.</p>
+            <p>Find out more about how I collaborate & my pet projects</p>
           </a>
 
           <a href="https://www.linkedin.com/in/jamesandersonwalsh/" className={styles.card}>
             <h3>LinkedIn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+            <p>My preferred way to share my resume with your team</p>
           </a>
 
           <a
