@@ -30,24 +30,34 @@ export default function Home() {
         <h1 className={styles.title}>Hi, I'm James 🤙</h1>
 
         <div className={styles.grid}>
-          <a href="https://github.com/jimboslicethat" className={styles.card}>
+          <a
+            target="_blank"
+            href="https://github.com/jimboslicethat"
+            className={styles.card}>
             <h3>GitHub &rarr;</h3>
             <p>Find out more about how I collaborate & my pet projects</p>
           </a>
 
           <a
+            target="_blank"
             href="https://www.linkedin.com/in/jamesandersonwalsh/"
             className={styles.card}>
             <h3>LinkedIn &rarr;</h3>
             <p>My preferred way to share my resume with your team</p>
           </a>
 
-          <a href="https://dev.to/jimboslicethat/" className={styles.card}>
+          <a
+            target="_blank"
+            href="https://dev.to/jimboslicethat/"
+            className={styles.card}>
             <h3>Blog Posts &rarr;</h3>
             <p>Check out my posts on my favorite blog platform, dev.to</p>
           </a>
 
-          <a href="mailto:jamesandersonwalsh@gmail.com" className={styles.card}>
+          <a
+            target="_blank"
+            href="mailto:jamesandersonwalsh@gmail.com"
+            className={styles.card}>
             <h3>Contact Me &rarr;</h3>
             <p>I'm always an email or direct message away 👍</p>
           </a>
