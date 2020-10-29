@@ -11,7 +11,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Hi, I'm James
+          Hi, I'm James 🤙
         </h1>
 
         <div className={styles.grid}>
@@ -30,7 +30,7 @@ export default function Home() {
             className={styles.card}
           >
             <h3>Blog Posts &rarr;</h3>
-            <p>Check out all of my posts on the blogging platform I love the most, dev.to</p>
+            <p>Check out my posts on my favorite blog platform, dev.to</p>
           </a>
 
           <a
@@ -51,7 +51,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Deploed with{' '}
+          Deployed with{' '}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
