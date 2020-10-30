@@ -22,12 +22,14 @@ export default function Home() {
         <div className={styles.grid}>
           <Card
             title="Github"
+            imageUrl="/github-mark-light.png"
             href="https://github.com/jimboslicethat"
             description="Find out more about how I collaborate & my pet projects"
           />
 
           <Card
             title="LinkedIn"
+            imageUrl="/linkedin-logo.png"
             href="https://www.linkedin.com/in/jamesandersonwalsh/"
             description="My preferred way to share my resume with your team"
           />
