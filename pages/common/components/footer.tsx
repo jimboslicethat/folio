@@ -10,7 +10,7 @@ export default function Footer(): React.ReactElement {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Built using Next.js. Special thanks to
+        Built using Next.js.
         <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
       </a>
     </footer>
