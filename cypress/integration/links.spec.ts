@@ -1,6 +1,6 @@
-describe('Index Page', () => {
+describe('Links', () => {
   before(() => {
-    cy.visit('/')
+    cy.visit('/links')
   })
 
   it('includes github link', () => {
