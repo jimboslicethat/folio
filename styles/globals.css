@@ -16,3 +16,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/*
+  TODO: Find out a way to store these as vars to be used throughout site.
+  brightBlue = '#5cc8ff'
+  darkGray = '#161215'
+  lightGray = '#2d252a'
+  white = '#fffafb'
+*/
