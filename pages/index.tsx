@@ -1,5 +1,7 @@
 import Head from 'next/head'
+
 import styles from '../styles/Home.module.css'
+import Card from './card'
 
 export default function Home() {
   return (
@@ -30,37 +32,29 @@ export default function Home() {
         <h1 className={styles.title}>Hi, I'm James 🤙</h1>
 
         <div className={styles.grid}>
-          <a
-            target="_blank"
+          <Card
+            title="Github"
             href="https://github.com/jimboslicethat"
-            className={styles.card}>
-            <h3>GitHub &rarr;</h3>
-            <p>Find out more about how I collaborate & my pet projects</p>
-          </a>
+            description="Find out more about how I collaborate & my pet projects"
+          />
 
-          <a
-            target="_blank"
+          <Card
+            title="LinkedIn"
             href="https://www.linkedin.com/in/jamesandersonwalsh/"
-            className={styles.card}>
-            <h3>LinkedIn &rarr;</h3>
-            <p>My preferred way to share my resume with your team</p>
-          </a>
+            description="My preferred way to share my resume with your team"
+          />
 
-          <a
-            target="_blank"
+          <Card
+            title="Blog Posts"
             href="https://dev.to/jimboslicethat/"
-            className={styles.card}>
-            <h3>Blog Posts &rarr;</h3>
-            <p>Check out my posts on my favorite blog platform, dev.to</p>
-          </a>
+            description="Check out my posts on my favorite blog platform, dev.to"
+          />
 
-          <a
-            target="_blank"
+          <Card
+            title="Contact Me"
             href="mailto:jamesandersonwalsh@gmail.com"
-            className={styles.card}>
-            <h3>Contact Me &rarr;</h3>
-            <p>I'm always an email or direct message away 👍</p>
-          </a>
+            description="I'm always an email or direct message away 👍"
+          />
         </div>
       </main>
 
