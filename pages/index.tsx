@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 import styles from './index.module.css'
-import Card from './card'
+import Card from './common/components/card'
 
 export default function Home() {
   return (
