@@ -1,8 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-import styles from './index.module.css'
-import NavBar from './navbar'
+import styles from '../styles/index.module.css'
 import Biography from './biography'
 import GridLinks from './grid-links'
 
@@ -23,7 +22,6 @@ export default function Home(): React.ReactElement {
 
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <NavBar />
       <main className={styles.main}>
         <h1 className={styles.title}>
           Hi, I&apos;m James

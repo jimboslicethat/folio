@@ -1,32 +1,13 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import MailIcon from '@material-ui/icons/Mail'
 import CreateIcon from '@material-ui/icons/Create'
 
 import Card from './common/components/card'
-
-const useStyles = makeStyles({
-  grid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(2, 1fr)',
-    gridTemplateRows: 'repeat(2, 300px)',
-    gridAutoRows: 'minmax(100px, auto)',
-    maxWidth: 800,
-    marginTop: '2rem'
-  },
-  '@media (max-width: 600px)': {
-    grid: {
-      width: '100%',
-      gridTemplateColumns: 'repeat(1, 1fr)',
-      gridTemplateRows: 'repeat(1, 300px)'
-    }
-  }
-})
+import styles from '../styles/grid-links.module.css'
 
 export default function GridLinks(): React.ReactElement {
-  const styles = useStyles()
   return (
     <div className={styles.grid}>
       <Card

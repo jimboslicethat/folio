@@ -1,13 +1,12 @@
-import { SvgIconComponent } from '@material-ui/icons'
 import React from 'react'
 
-import styles from './card.module.css'
+import styles from '../../../styles/common/components/card.module.css'
 
 type CardProps = {
   title: string
   href: string
   description: string
-  icon: SvgIconComponent | null
+  icon: React.ReactElement | null
 }
 
 export default function Card({ href, title, description, icon }: CardProps): React.ReactElement {
