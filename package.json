@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "cypress:open": "yarn cypress:open",
-    "cypress:run": "yarn cypress:run",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "dev": "next dev",
-    "format": "prettier --check **/*.{ts,tsx}",
+    "format": "prettier --check ./**/*.{ts,tsx}",
+    "lint": "eslint .",
     "start": "next start"
   },
   "dependencies": {
@@ -19,6 +20,13 @@
     "@types/node": "14.14.6",
     "@types/react": "16.9.55",
     "cypress": "5.5.0",
+    "eslint": "7.12.1",
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-react": "7.21.5",
     "husky": "4.3.0",
     "prettier": "2.1.2",
     "pretty-quick": "3.1.0",
