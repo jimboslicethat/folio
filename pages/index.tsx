@@ -6,6 +6,7 @@ import CreateIcon from '@material-ui/icons/Create'
 
 import styles from './index.module.css'
 import Card from './common/components/card'
+import NavBar from './navbar'
 import Biography from './biography'
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
 
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-
+      <NavBar />
       <main className={styles.main}>
         <h1 className={styles.title}>Hi, I'm James 🤙</h1>
         <Biography />
