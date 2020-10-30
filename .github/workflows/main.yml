@@ -60,7 +60,6 @@ jobs:
 
       - name: Run integration tests
         uses: cypress-io/github-action@v2
-        env:
         with:
           browser: chrome
           headless: true
