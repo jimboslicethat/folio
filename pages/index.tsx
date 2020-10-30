@@ -3,7 +3,8 @@ import Head from 'next/head'
 
 import styles from '../styles/index.module.css'
 import Biography from './biography'
-import GridLinks from './grid-links'
+import NavBar from './common/components/navbar'
+import Footer from './common/components/footer'
 
 export default function Home(): React.ReactElement {
   return (
@@ -22,6 +23,7 @@ export default function Home(): React.ReactElement {
 
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
+      <NavBar />
       <main className={styles.main}>
         <h1 className={styles.title}>
           Hi, I&apos;m James
@@ -30,19 +32,9 @@ export default function Home(): React.ReactElement {
           </span>
         </h1>
         <Biography />
-        <GridLinks />
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Built using Next.js. Special thanks to
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <Footer />
     </div>
   )
 }
