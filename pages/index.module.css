@@ -40,6 +40,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 300px);
   grid-gap: 8px;
   grid-auto-rows: minmax(100px, auto);
   max-width: 800px;
@@ -53,6 +54,7 @@
 @media (max-width: 600px) {
   .grid {
     width: 100%;
-    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 300px);
   }
 }
