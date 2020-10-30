@@ -10,9 +10,11 @@ type CardProps = {
 
 export default function Card({ href, title, description }: CardProps) {
   return (
-    <a target="_blank" href={href} className={styles.card}>
-      <h3 className={styles.title}>{title} &rarr;</h3>
-      <p className={styles.description}>{description}</p>
-    </a>
+    <section className={styles.card}>
+      <a target="_blank" href={href}>
+        <h3 className={styles.title}>{title} &rarr;</h3>
+        <p className={styles.description}>{description}</p>
+      </a>
+    </section>
   )
 }

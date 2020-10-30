@@ -43,7 +43,7 @@
   grid-gap: 8px;
   grid-auto-rows: minmax(100px, auto);
   max-width: 800px;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .logo {
