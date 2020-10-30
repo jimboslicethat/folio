@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   }
 })
 
-export default function GridLinks() {
+export default function GridLinks(): React.ReactElement {
   const styles = useStyles()
   return (
     <div className={styles.grid}>

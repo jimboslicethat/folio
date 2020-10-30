@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-export default function ButtonAppBar() {
+export default function ButtonAppBar(): React.ReactElement {
   const classes = useStyles()
 
   return (

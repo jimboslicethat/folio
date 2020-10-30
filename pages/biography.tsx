@@ -2,11 +2,13 @@ import React from 'react'
 
 import styles from './biography.module.css'
 
-export default function Biography() {
+export default function Biography(): React.ReactElement {
   return (
     <section className={styles.quote} aria-label="About me">
-      <span className={styles.firstLine}>I'm a proud geek, & life long learner</span>
-      <span className={styles.secondLine}>Who can't stop printing "Hello World"</span>
+      <span className={styles.firstLine}>I&apos;m a proud geek, & life long learner</span>
+      <span className={styles.secondLine}>
+        Who can&apos;t stop printing &quot;Hello World&quot;
+      </span>
     </section>
   )
 }

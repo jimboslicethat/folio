@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 
 import styles from './index.module.css'
@@ -5,7 +6,7 @@ import NavBar from './navbar'
 import Biography from './biography'
 import GridLinks from './grid-links'
 
-export default function Home() {
+export default function Home(): React.ReactElement {
   return (
     <div className={styles.container}>
       <Head>
@@ -24,7 +25,12 @@ export default function Home() {
       </Head>
       <NavBar />
       <main className={styles.main}>
-        <h1 className={styles.title}>Hi, I'm James 🤙</h1>
+        <h1 className={styles.title}>
+          Hi, I&apos;m James
+          <span role="img" aria-label="shaka emoji">
+            🤙,
+          </span>
+        </h1>
         <Biography />
         <GridLinks />
       </main>
@@ -33,8 +39,9 @@ export default function Home() {
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
-          rel="noopener noreferrer">
-          Built using Next.js. Special thanks to{' '}
+          rel="noopener noreferrer"
+        >
+          Built using Next.js. Special thanks to
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>

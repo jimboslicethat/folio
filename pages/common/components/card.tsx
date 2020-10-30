@@ -1,3 +1,4 @@
+import { SvgIconComponent } from '@material-ui/icons'
 import React from 'react'
 
 import styles from './card.module.css'
@@ -6,13 +7,13 @@ type CardProps = {
   title: string
   href: string
   description: string
-  icon?: any
+  icon: SvgIconComponent | null
 }
 
-export default function Card({ href, title, description, icon }: CardProps) {
+export default function Card({ href, title, description, icon }: CardProps): React.ReactElement {
   return (
     <section className={styles.card}>
-      <a target="_blank" href={href}>
+      <a target="_blank" rel="noreferrer" href={href}>
         <div className={styles.cardHeader}>
           {icon}
           <h3 className={styles.title}>{title}</h3>
