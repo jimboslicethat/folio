@@ -1,5 +1,7 @@
 # Folio
 
+![Build & Test](https://github.com/jimboslicethat/folio/workflows/Build%20&%20Test/badge.svg)
+
 ## Getting Started
 
 First, run the development server:
