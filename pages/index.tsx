@@ -26,9 +26,9 @@ export default function Home(): React.ReactElement {
       <NavBar />
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Hi, I&apos;m James
+          Hi, I&apos;m James&nbsp;
           <span role="img" aria-label="shaka emoji">
-            🤙,
+            🤙
           </span>
         </h1>
         <Biography />
