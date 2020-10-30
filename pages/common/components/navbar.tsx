@@ -7,22 +7,21 @@ import HomeIcon from '@material-ui/icons/Home'
 import styles from '../../../styles/common/components/navbar.module.css'
 
 export default function NavBar(): React.ReactElement {
+  const links = [
+    { href: '/', content: <HomeIcon fontSize="large" /> },
+    { href: '/blog-posts', content: 'Blog' },
+    { href: 'links', content: 'Links' }
+  ]
+
   return (
     <nav className={styles.container}>
-      <Link href="/" passHref>
-        <a className={styles.link} rel="no-referrer">
-          <HomeIcon fontSize="large" />
-        </a>
-      </Link>
-      <Link href="/blog-posts" passHref>
-        <a className={styles.link}>Blog</a>
-      </Link>
-      {/* <Link href="/top-projects" passHref>
-        Projects
-      </Link> */}
-      <Link href="/links" passHref>
-        <a className={styles.link}>Links</a>
-      </Link>
+      {links.map(link => (
+        <Link key={link.href} href={link.href} passHref>
+          <a className={styles.link} rel="no-referrer">
+            {link.content}
+          </a>
+        </Link>
+      ))}
     </nav>
   )
 }
