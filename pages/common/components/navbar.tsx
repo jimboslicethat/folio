@@ -8,18 +8,18 @@ export default function NavBar(): React.ReactElement {
   return (
     <nav className={styles.container}>
       <Link href="/" passHref>
-        <a href="/" rel="no-referrer">
+        <a className={styles.link} href="/" rel="no-referrer">
           <HomeIcon fontSize="large" />
         </a>
       </Link>
       <Link href="/blog-posts" passHref>
-        Blog
+        <span className={styles.link}>Blog</span>
       </Link>
       {/* <Link href="/top-projects" passHref>
         Projects
       </Link> */}
       <Link href="/links" passHref>
-        Links
+        <span className={styles.link}>Links</span>
       </Link>
     </nav>
   )
