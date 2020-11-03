@@ -1,10 +1,11 @@
-import React from 'react'
 import Head from 'next/head'
+import React from 'react'
 
 import styles from '../styles/index.module.css'
+
 import Biography from './_biography'
-import NavBar from './common/_navbar'
 import Footer from './common/_footer'
+import NavBar from './common/_navbar'
 
 export default function Home(): React.ReactElement {
   return (

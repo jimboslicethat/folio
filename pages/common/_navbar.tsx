@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-import React from 'react'
-import Link from 'next/link'
 import HomeIcon from '@material-ui/icons/Home'
+import Link from 'next/link'
+import React from 'react'
 
 import styles from '../../styles/common/_navbar.module.css'
 

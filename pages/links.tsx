@@ -1,13 +1,14 @@
-import React from 'react'
+import CreateIcon from '@material-ui/icons/Create'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import MailIcon from '@material-ui/icons/Mail'
-import CreateIcon from '@material-ui/icons/Create'
+import React from 'react'
+
+import styles from '../styles/links.module.css'
 
 import Card from './common/_card'
-import styles from '../styles/links.module.css'
-import NavBar from './common/_navbar'
 import Footer from './common/_footer'
+import NavBar from './common/_navbar'
 
 export default function GridLinks(): React.ReactElement {
   return (
