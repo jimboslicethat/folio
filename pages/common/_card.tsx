@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from '../../../styles/common/components/card.module.css'
+import styles from '../../styles/common/_card.module.css'
 
 type CardProps = {
   title: string

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from '../styles/biography.module.css'
+import styles from '../styles/_biography.module.css'
 
 export default function Biography(): React.ReactElement {
   return (

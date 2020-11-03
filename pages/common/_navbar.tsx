@@ -4,7 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import HomeIcon from '@material-ui/icons/Home'
 
-import styles from '../../../styles/common/components/navbar.module.css'
+import styles from '../../styles/common/_navbar.module.css'
 
 export default function NavBar(): React.ReactElement {
   const links = [

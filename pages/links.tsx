@@ -4,10 +4,10 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import MailIcon from '@material-ui/icons/Mail'
 import CreateIcon from '@material-ui/icons/Create'
 
-import Card from './common/components/card'
+import Card from './common/_card'
 import styles from '../styles/links.module.css'
-import NavBar from './common/components/navbar'
-import Footer from './common/components/footer'
+import NavBar from './common/_navbar'
+import Footer from './common/_footer'
 
 export default function GridLinks(): React.ReactElement {
   return (

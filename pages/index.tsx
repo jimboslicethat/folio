@@ -2,9 +2,9 @@ import React from 'react'
 import Head from 'next/head'
 
 import styles from '../styles/index.module.css'
-import Biography from './biography'
-import NavBar from './common/components/navbar'
-import Footer from './common/components/footer'
+import Biography from './_biography'
+import NavBar from './common/_navbar'
+import Footer from './common/_footer'
 
 export default function Home(): React.ReactElement {
   return (
