@@ -1,0 +1,17 @@
+.container {
+  min-height: 32vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8rem 4rem 8rem;
+}
+.content {
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 0 1.5rem 2rem 1.5rem;
+  }
+}
