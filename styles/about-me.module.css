@@ -1,7 +1,7 @@
 .container {
-  min-height: 50vh;
+  min-height: 88vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 0 8rem 4rem 8rem;
@@ -12,25 +12,41 @@
   justify-content: center;
   align-items: center;
   background-color: #2d252a;
-  border-radius: 10px;
+  border-radius: 8px;
+  outline-color: transparent;
   font-size: 20px;
-  min-width: 20rem;
+  text-align: center;
+  width: 24rem;
+  height: 24rem;
   margin: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
   transition: all 0.3s ease-in-out;
 }
 .tileSection:hover,
 .tileSection:focus,
 .tileSection:active {
   cursor: pointer;
-  transform: scale(1.15);
+  outline: none;
 }
+.tileSection:hover {
+  transform: scale(1.05);
+}
+
 .content {
   font-size: 18px;
+  padding: 8px;
+  background-color: #2d252a;
+  border-radius: 10px;
 }
 
 @media (max-width: 600px) {
   .container {
     margin: 0 1.5rem 2rem 1.5rem;
+    flex-direction: column;
+  }
+  .tileSection {
+    height: 16rem;
+    width: 20rem;
+    font-size: 16px;
   }
 }
