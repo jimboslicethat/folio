@@ -9,6 +9,7 @@ import styles from '../../styles/common/_navbar.module.css'
 export default function NavBar(): React.ReactElement {
   const links = [
     { href: '/', content: <HomeIcon fontSize="large" /> },
+    { href: 'about-me', content: 'About' },
     { href: '/blog-posts', content: 'Blog' },
     { href: 'links', content: 'Links' }
   ]
