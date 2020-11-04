@@ -96,13 +96,19 @@ function AboutMeTile(params: AboutMeTileParams): React.ReactElement {
 
   return (
     <>
-      <button onClick={onClick}>
+      <section
+        role="button"
+        className={styles.tileSection}
+        onClick={onClick}
+        onKeyPress={onClick}
+        tabIndex={0}
+      >
         {title}
         &nbsp;
         <span role="img" aria-label={ariaLabel}>
           {emoji}
         </span>
-      </button>
+      </section>
       {shouldShowContent && <article className={styles.content}>{children}</article>}
     </>
   )

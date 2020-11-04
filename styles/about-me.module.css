@@ -1,10 +1,29 @@
 .container {
-  min-height: 32vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 8rem 4rem 8rem;
+}
+
+.tileSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d252a;
+  border-radius: 10px;
+  font-size: 20px;
+  min-width: 20rem;
+  margin: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.tileSection:hover,
+.tileSection:focus,
+.tileSection:active {
+  cursor: pointer;
+  transform: scale(1.15);
 }
 .content {
   font-size: 18px;
