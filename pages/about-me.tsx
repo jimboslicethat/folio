@@ -7,9 +7,9 @@ import Footer from './common/_footer'
 import NavBar from './common/_navbar'
 
 export default function BlogPosts(): React.ReactElement {
-  const [showAboutMeContent, setAboutMeContentVisiblity] = useState(false)
-  const [showHowIGotStartedContent, setHowIGotStartedContentVisibility] = useState(false)
-  const [showMyValuesContent, setMyValuesContentVisibility] = useState(false)
+  const [showAboutMeContent, toggleAboutMeVisiblity] = useState(false)
+  const [showHowIGotStartedContent, toggleHowIGotStartedVisibility] = useState(false)
+  const [showMyValuesContent, toggleMyValuesVisibility] = useState(false)
 
   const aboutMeContent = `In the summer you can find me hiking, traveling to national parks, mountain biking, and
           rock climbing. In the winter you can find me huddled up playing my favorite video games or
@@ -49,36 +49,48 @@ export default function BlogPosts(): React.ReactElement {
     </ul>
   )
 
-  function renderContent(content: string | React.ReactElement): React.ReactElement {
-    return <article className={styles.content}>{content}</article>
+  function renderContent(
+    content: string | React.ReactElement,
+    shouldShowContent: boolean
+  ): React.ReactElement {
+    return shouldShowContent && <article className={styles.content}>{content}</article>
   }
+
+  function renderAboutMeTitles(
+    title: string,
+    emojiAriaLabel: string,
+    emoji: string,
+    contentToggle: () => unknown
+  ): React.ReactElement {
+    return (
+      <button onClick={contentToggle}>
+        {title}
+        &nbsp;
+        <span role="img" aria-label={emojiAriaLabel}>
+          {emoji}
+        </span>
+      </button>
+    )
+  }
+
   return (
     <>
       <NavBar />
       <main className={styles.container}>
-        <button onClick={() => setAboutMeContentVisiblity(!showAboutMeContent)}>
-          A Little About Me&nbsp;
-          <span role="img" aria-label="hang loose emoji">
-            🤙
-          </span>
-        </button>
-        {showAboutMeContent && renderContent(aboutMeContent)}
+        {renderAboutMeTitles('A Little About Me', 'shaka emoji', '🤙', () =>
+          toggleAboutMeVisiblity(!showAboutMeContent)
+        )}
+        {renderContent(aboutMeContent, showAboutMeContent)}
 
-        <button onClick={() => setHowIGotStartedContentVisibility(!showHowIGotStartedContent)}>
-          How I Got Started&nbsp;
-          <span role="img" aria-label="computer screen">
-            🖥
-          </span>
-        </button>
-        {showHowIGotStartedContent && renderContent(howIGotStartedContent)}
+        {renderAboutMeTitles('How I Got Started', 'computer screen', '🖥', () =>
+          toggleHowIGotStartedVisibility(!showHowIGotStartedContent)
+        )}
+        {renderContent(howIGotStartedContent, showHowIGotStartedContent)}
 
-        <button onClick={() => setMyValuesContentVisibility(!showMyValuesContent)}>
-          My Values&nbsp;
-          <span role="img" aria-label="lightbulb">
-            💡
-          </span>
-        </button>
-        {showMyValuesContent && renderContent(myValuesContent)}
+        {renderAboutMeTitles('My Values', 'lightbulb', '💡', () =>
+          toggleMyValuesVisibility(!showMyValuesContent)
+        )}
+        {renderContent(myValuesContent, showMyValuesContent)}
       </main>
       <Footer />
     </>
