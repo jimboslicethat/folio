@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from '../../styles/common/_card.module.css'
+import styles from '../styles/components/card.module.css'
 
 type CardProps = {
   title: string
@@ -8,6 +8,8 @@ type CardProps = {
   description: string
   icon: React.ReactElement | null
 }
+
+// TODO: No usages. If usages dont pop up during re-design, remove this component.
 
 export default function Card({ href, title, description, icon }: CardProps): React.ReactElement {
   return (

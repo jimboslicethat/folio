@@ -9,7 +9,7 @@ import TwitterIcon from '@material-ui/icons/Twitter'
 import Link from 'next/link'
 import React from 'react'
 
-import styles from '../../styles/common/_navbar.module.css'
+import styles from '../styles/components/navbar.module.css'
 
 export default function NavBar(): React.ReactElement {
   const internalLinks = [

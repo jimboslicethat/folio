@@ -1,9 +1,8 @@
 import React from 'react'
 
-import styles from '../styles/blog-posts.module.css'
-
-import Footer from './common/_footer'
-import NavBar from './common/_navbar'
+import Footer from '../components/footer'
+import NavBar from '../components/navbar'
+import styles from '../styles/pages/blog-posts.module.css'
 
 export default function BlogPosts(): React.ReactElement {
   return (

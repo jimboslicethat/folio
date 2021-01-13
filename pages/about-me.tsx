@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import ReactCardFlip from 'react-card-flip'
 
-import styles from '../styles/about-me.module.css'
-
-import Footer from './common/_footer'
-import NavBar from './common/_navbar'
+import Footer from '../components/footer'
+import NavBar from '../components/navbar'
+import styles from '../styles/pages/about-me.module.css'
 
 export default function AboutMe(): React.ReactElement {
   const [showAboutMeContent, toggleAboutMeVisiblity] = useState(false)

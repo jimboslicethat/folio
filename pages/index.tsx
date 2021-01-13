@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import React from 'react'
 
-import styles from '../styles/index.module.css'
+import Biography from '../components/biography'
+import Footer from '../components/footer'
+import NavBar from '../components/navbar'
+import styles from '../styles/pages/index.module.css'
 
-import Biography from './_biography'
-import Footer from './common/_footer'
-import NavBar from './common/_navbar'
-
-export default function Home(): React.ReactElement {
+export default function Index(): React.ReactElement {
   return (
     <div className={styles.container}>
       <Head>

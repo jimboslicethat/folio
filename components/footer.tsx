@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from '../../styles/common/_footer.module.css'
+import styles from '../styles/components/footer.module.css'
 
 export default function Footer(): React.ReactElement {
   return (
