@@ -14,7 +14,7 @@ describe('Internal links navigation', () => {
 
   it.skip('includes blog link', () => {
     // TODO: This page is being refactored. Turned off until thats completed.
-    const blogPostLink = '/blog-posts'
+    const blogPostLink = '/blog'
 
     cy.get(`a[href*="${blogPostLink}"]`).should('exist').click()
   })

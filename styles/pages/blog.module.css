@@ -6,19 +6,8 @@
   align-items: center;
 }
 
-.blogPost {
-  width: 23rem;
-  height: 23rem;
-  margin: 2rem;
-}
-
 @media (max-width: 600px) {	
   .container {	
     flex-direction: column;
-  }
-  .blogPost {
-    width: 20rem;
-    height: 20rem;
-    margin: 1rem
   }
 }

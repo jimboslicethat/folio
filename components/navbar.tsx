@@ -30,7 +30,7 @@ export default function NavBar(): React.ReactElement {
       )
     }
     // TODO: Temporarily commented out till UX is better.
-    // { href: '/blog-posts', content: 'Blog' }
+    // { href: '/blog', content: 'Blog' }
   ]
   const externalLinks = [
     {
