@@ -1,6 +1,6 @@
-describe('Links', () => {
+describe('External links navigation', () => {
   before(() => {
-    cy.visit('/links')
+    cy.visit('/')
   })
 
   it('includes github link', () => {
@@ -15,15 +15,9 @@ describe('Links', () => {
     cy.get(`a[href*="${linkedinLink}"]`).should('exist')
   })
 
-  it('includes dev.to link', () => {
-    const devtoLink = 'https://dev.to/jimboslicethat/'
+  it('includes twitter link', () => {
+    const twitterLink = 'https://twitter.com/jimboslicethat'
 
-    cy.get(`a[href*="${devtoLink}"]`).should('exist')
-  })
-
-  it('includes a mailto link', () => {
-    const devtoLink = 'mailto:jamesandersonwalsh@gmail.com'
-
-    cy.get(`a[href*="${devtoLink}"]`).should('exist')
+    cy.get(`a[href*="${twitterLink}"]`).should('exist')
   })
 })

@@ -4,17 +4,17 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 0 2rem 0 2rem;
+  padding: 0.5rem;
   font-size: 24px;
 }
 
 .link {
-  margin: 0 8px 0 8px;
+  margin: 4px;
   padding: 0.5rem;
-  transition: transform 0.25s ease-in-out;
 }
 
 .link:hover {
-  transform: scale(1.05);
   background-color: #2d252a;
   border-radius: 5px;
   cursor: pointer;
