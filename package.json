@@ -18,7 +18,8 @@
     "next": "10.0.0",
     "react": "17.0.1",
     "react-card-flip": "1.0.11",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "swr": "0.4.0"
   },
   "devDependencies": {
     "@types/node": "14.14.6",

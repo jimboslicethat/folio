@@ -8,8 +8,8 @@ My portfolio site. Powered by next.js, react, & typescript.
 
 
 ## Getting Started
-
-Run the development server:
+1. Configure secrets in `.env.local` *(See `.env.local.example`)*
+1. Run the development server:
 
 ```bash
 yarn dev
