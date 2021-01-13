@@ -25,7 +25,9 @@
     "@types/react": "16.9.55",
     "@typescript-eslint/eslint-plugin": "4.6.0",
     "@typescript-eslint/parser": "4.6.0",
+    "commitizen": "4.2.2",
     "cypress": "5.5.0",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "7.12.1",
     "eslint-config-airbnb": "18.2.0",
     "eslint-config-prettier": "6.15.0",
@@ -43,6 +45,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
       "pre-push": "yarn run cypress:run"
     }
   },
@@ -50,5 +53,10 @@
     "*.{ts,tsx}": [
       "eslint --fix"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
