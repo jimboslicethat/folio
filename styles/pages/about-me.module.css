@@ -1,5 +1,4 @@
 .container {
-  min-height: 88vh;
   display: flex;
   flex-direction: row;
   justify-content: center;

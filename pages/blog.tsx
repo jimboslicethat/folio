@@ -14,7 +14,7 @@ export default function BlogPosts(): React.ReactElement {
   if (!data) return <div>loading...</div>
 
   return (
-    <main className={styles.container}>
+    <div className={styles.container}>
       <h1>Blog Posts</h1>
       <li className={styles.list}>
         {data.map(post => (
@@ -45,6 +45,6 @@ export default function BlogPosts(): React.ReactElement {
           </ul>
         ))}
       </li>
-    </main>
+    </div>
   )
 }

@@ -9,7 +9,7 @@ export default function AboutMe(): React.ReactElement {
   const [showMyValuesContent, toggleMyValuesVisibility] = useState(false)
 
   return (
-    <main className={styles.container}>
+    <div className={styles.container}>
       <ReactCardFlip isFlipped={showAboutMeContent}>
         <AboutMeTile
           title="A Little About Me"
@@ -77,7 +77,7 @@ export default function AboutMe(): React.ReactElement {
           that processes are sometimes necessary in order to set people up for success.
         </section>
       </ReactCardFlip>
-    </main>
+    </div>
   )
 }
 
