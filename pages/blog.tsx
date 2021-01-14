@@ -19,27 +19,29 @@ export default function BlogPosts(): React.ReactElement {
       <li className={styles.list}>
         {data.map(post => (
           <ul key={post.id} className={styles.listItem}>
-            <h2 className={styles.title}>{post.title}</h2>
-            <div>{post.description}</div>
-            <div className={styles.metadata}>
-              <span className={styles.metadataContent}>
-                <FavoriteIcon style={{ ...iconStyles, color: '#FF6B6B' }} />
-                {post.positive_reactions_count}
-              </span>
-              <span className={styles.metadataContent}>
-                <CommentIcon style={iconStyles} />
-                {post.comments_count}
-              </span>
-              <span className={styles.metadataContent}>
-                <LabelIcon style={iconStyles} />
-                <span className={styles.emphasized}>{post.tag_list.map(tag => `#${tag} `)}</span>
-              </span>
-              <span className={styles.metadataContent}>
-                <span className={styles.emphasized}>
-                  {new Date(post.published_at).toDateString()}
+            <a href={post.url} target="_blank" rel="noreferrer">
+              <h2 className={styles.title}>{post.title}</h2>
+              <div>{post.description}</div>
+              <div className={styles.metadata}>
+                <span className={styles.metadataContent}>
+                  <FavoriteIcon style={{ ...iconStyles, color: '#FF6B6B' }} />
+                  {post.positive_reactions_count}
                 </span>
-              </span>
-            </div>
+                <span className={styles.metadataContent}>
+                  <CommentIcon style={iconStyles} />
+                  {post.comments_count}
+                </span>
+                <span className={styles.metadataContent}>
+                  <LabelIcon style={iconStyles} />
+                  <span className={styles.emphasized}>{post.tag_list.map(tag => `#${tag} `)}</span>
+                </span>
+                <span className={styles.metadataContent}>
+                  <span className={styles.emphasized}>
+                    {new Date(post.published_at).toDateString()}
+                  </span>
+                </span>
+              </div>
+            </a>
           </ul>
         ))}
       </li>
