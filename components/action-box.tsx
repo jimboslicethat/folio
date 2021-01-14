@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 import React from 'react'
 
@@ -11,12 +12,14 @@ interface Props {
 
 export default function ActionBox({ icon, text, href }: Props): React.ReactElement {
   return (
-    <section className={styles.container}>
-      {icon}
-      <h2>
-        <Link href={href}>{text}</Link>
-        &nbsp;&#10132;&nbsp;
-      </h2>
-    </section>
+    <Link href={href} passHref>
+      <motion.a href={href} className={styles.container} whileHover={{ scale: 1.03 }}>
+        {icon}
+        <h2>
+          {text}
+          &nbsp;&#10132;&nbsp;
+        </h2>
+      </motion.a>
+    </Link>
   )
 }

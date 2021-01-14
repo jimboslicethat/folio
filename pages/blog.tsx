@@ -6,7 +6,7 @@ import styles from '../styles/pages/blog.module.css'
 
 const iconStyles = { color: '#0088CC', marginRight: 4 }
 
-export default function BlogPosts(): React.ReactElement {
+export default function Blog(): React.ReactElement {
   const { data } = useSWR('/api/posts', () => fetch('/api/posts').then(res => res.json()))
 
   if (!data) return <div>loading...</div>

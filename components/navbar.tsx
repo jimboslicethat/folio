@@ -59,9 +59,7 @@ export default function NavBar(): React.ReactElement {
       <div>
         {internalLinks.map(link => (
           <Link key={link.href} href={link.href} passHref>
-            <a className={styles.link} rel="no-referrer">
-              {link.content}
-            </a>
+            <a className={styles.link}>{link.content}</a>
           </Link>
         ))}
       </div>
