@@ -1,4 +1,8 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react'
+
+import Footer from 'components/footer'
+import NavBar from 'components/navbar'
 
 import '../styles/globals.css'
 
@@ -7,8 +11,13 @@ interface Params {
   pageProps: unknown
 }
 function MyApp({ Component, pageProps }: Params): React.ReactElement {
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  return <Component {...pageProps} />
+  return (
+    <>
+      <NavBar />
+      <Component {...pageProps} />
+      <Footer />
+    </>
+  )
 }
 
 export default MyApp

@@ -2,8 +2,6 @@ import Head from 'next/head'
 import React from 'react'
 
 import Biography from '../components/biography'
-import Footer from '../components/footer'
-import NavBar from '../components/navbar'
 import styles from '../styles/pages/index.module.css'
 
 export default function Index(): React.ReactElement {
@@ -23,7 +21,6 @@ export default function Index(): React.ReactElement {
 
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <NavBar />
       <main className={styles.main}>
         <h1 className={styles.title}>
           Hi, I&apos;m James&nbsp;
@@ -33,8 +30,6 @@ export default function Index(): React.ReactElement {
         </h1>
         <Biography />
       </main>
-
-      <Footer />
     </div>
   )
 }
