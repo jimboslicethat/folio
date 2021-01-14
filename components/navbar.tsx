@@ -4,6 +4,7 @@ import { Tooltip } from '@material-ui/core'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import HomeIcon from '@material-ui/icons/Home'
 import InfoIcon from '@material-ui/icons/Info'
+import LibraryBooksRoundedIcon from '@material-ui/icons/LibraryBooksRounded'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import Link from 'next/link'
@@ -22,6 +23,14 @@ export default function NavBar(): React.ReactElement {
       )
     },
     {
+      href: '/blog',
+      content: (
+        <Tooltip title="Go to Blog" placement="bottom" arrow>
+          <LibraryBooksRoundedIcon aria-label="Go to Blog" fontSize="large" />
+        </Tooltip>
+      )
+    },
+    {
       href: 'about-me',
       content: (
         <Tooltip title="Go to About Me" placement="bottom" arrow>
@@ -29,8 +38,6 @@ export default function NavBar(): React.ReactElement {
         </Tooltip>
       )
     }
-    // TODO: Temporarily commented out till UX is better.
-    // { href: '/blog', content: 'Blog' }
   ]
   const externalLinks = [
     {
@@ -61,24 +68,28 @@ export default function NavBar(): React.ReactElement {
 
   return (
     <nav className={styles.container}>
-      {internalLinks.map(link => (
-        <Link key={link.href} href={link.href} passHref>
-          <a className={styles.link} rel="no-referrer">
+      <div>
+        {internalLinks.map(link => (
+          <Link key={link.href} href={link.href} passHref>
+            <a className={styles.link} rel="no-referrer">
+              {link.content}
+            </a>
+          </Link>
+        ))}
+      </div>
+      <div>
+        {externalLinks.map(link => (
+          <a
+            className={styles.link}
+            key={link.href}
+            href={link.href}
+            target="_blank"
+            rel="noreferrer"
+          >
             {link.content}
           </a>
-        </Link>
-      ))}
-      {externalLinks.map(link => (
-        <a
-          className={styles.link}
-          key={link.href}
-          href={link.href}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {link.content}
-        </a>
-      ))}
+        ))}
+      </div>
     </nav>
   )
 }
