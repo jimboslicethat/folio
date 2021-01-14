@@ -2,7 +2,7 @@ import { CodeBlock, BookReader, MessageDetail, InfoCircle } from '@styled-icons/
 import { motion } from 'framer-motion'
 import React from 'react'
 
-import Typewriter from '../components/action-box'
+import ActionBox from '../components/action-box'
 import styles from '../styles/pages/index.module.css'
 
 const iconStyles = {
@@ -47,22 +47,29 @@ export default function Index(): React.ReactElement {
         animate="visible"
       >
         <motion.span variants={item}>
-          <Typewriter icon={<CodeBlock style={iconStyles} size="48" />} text="Check out my work" />
+          <ActionBox
+            href="/projects"
+            icon={<CodeBlock style={iconStyles} size="48" />}
+            text="Check out my work"
+          />
         </motion.span>
         <motion.span variants={item}>
-          <Typewriter
+          <ActionBox
+            href="/find-me"
             icon={<MessageDetail style={iconStyles} size="48" />}
             text="Reach out on social"
           />
         </motion.span>
         <motion.span variants={item}>
-          <Typewriter
+          <ActionBox
+            href="/bio"
             icon={<InfoCircle style={iconStyles} size="48" />}
             text="Learn more about me"
           />
         </motion.span>
         <motion.span variants={item}>
-          <Typewriter
+          <ActionBox
+            href="/blog"
             icon={<BookReader style={iconStyles} size="48" />}
             text="Read my blog posts"
           />
