@@ -3,7 +3,6 @@
 import { Tooltip } from '@material-ui/core'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import HomeIcon from '@material-ui/icons/Home'
-import InfoIcon from '@material-ui/icons/Info'
 import LibraryBooksRoundedIcon from '@material-ui/icons/LibraryBooksRounded'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import TwitterIcon from '@material-ui/icons/Twitter'
@@ -27,14 +26,6 @@ export default function NavBar(): React.ReactElement {
       content: (
         <Tooltip title="Go to Blog" placement="bottom" arrow>
           <LibraryBooksRoundedIcon aria-label="Go to Blog" fontSize="large" />
-        </Tooltip>
-      )
-    },
-    {
-      href: 'about-me',
-      content: (
-        <Tooltip title="Go to About Me" placement="bottom" arrow>
-          <InfoIcon aria-label="Go to About Me" fontSize="large" />
         </Tooltip>
       )
     }
