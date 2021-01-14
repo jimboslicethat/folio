@@ -10,10 +10,15 @@
   list-style-type:none;
 }
 .listItem {
-  background-color: #FFFAFB;
-  color: #161215;
+  color: #FFFAFB;
+  border: 3px solid #5CC8FF;
   border-radius: 5px;
   padding: 1.5rem;
+  transition: all .2s ease-in-out;
+}
+.listItem:hover {
+  cursor: pointer;
+  transform: scale(1.025);
 }
 
 .title {
@@ -32,4 +37,5 @@
 }
 .emphasized {
   font-weight: 600;
+  color: #9B7EDE;
 }

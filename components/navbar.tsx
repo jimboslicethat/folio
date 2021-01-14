@@ -1,11 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import { Tooltip } from '@material-ui/core'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import HomeIcon from '@material-ui/icons/Home'
-import LibraryBooksRoundedIcon from '@material-ui/icons/LibraryBooksRounded'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import TwitterIcon from '@material-ui/icons/Twitter'
+import { Blogger, Github, LinkedinSquare, Twitter } from '@styled-icons/boxicons-logos'
+import { Home } from '@styled-icons/boxicons-regular'
 import Link from 'next/link'
 import React from 'react'
 
@@ -17,7 +14,7 @@ export default function NavBar(): React.ReactElement {
       href: '/',
       content: (
         <Tooltip title="Go Home" placement="bottom" arrow>
-          <HomeIcon aria-label="Go Home" fontSize="large" />
+          <Home size="40" />
         </Tooltip>
       )
     },
@@ -25,7 +22,7 @@ export default function NavBar(): React.ReactElement {
       href: '/blog',
       content: (
         <Tooltip title="Go to Blog" placement="bottom" arrow>
-          <LibraryBooksRoundedIcon aria-label="Go to Blog" fontSize="large" />
+          <Blogger size="40" />
         </Tooltip>
       )
     }
@@ -35,7 +32,7 @@ export default function NavBar(): React.ReactElement {
       href: 'https://github.com/jimboslicethat',
       content: (
         <Tooltip title="See my Github" placement="bottom" arrow>
-          <GitHubIcon aria-label="See my Github" fontSize="large" />
+          <Github size="40" />
         </Tooltip>
       )
     },
@@ -43,7 +40,7 @@ export default function NavBar(): React.ReactElement {
       href: 'https://www.linkedin.com/in/jamesandersonwalsh/',
       content: (
         <Tooltip title="See my LinkedIn" placement="bottom" arrow>
-          <LinkedInIcon aria-label="See my LinkedIn" fontSize="large" />
+          <LinkedinSquare size="40" />
         </Tooltip>
       )
     },
@@ -51,7 +48,7 @@ export default function NavBar(): React.ReactElement {
       href: 'https://twitter.com/jimboslicethat',
       content: (
         <Tooltip title="See my Twitter" placement="bottom" arrow>
-          <TwitterIcon aria-label="See my Twitter" fontSize="large" />
+          <Twitter size="40" />
         </Tooltip>
       )
     }

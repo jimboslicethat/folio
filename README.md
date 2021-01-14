@@ -26,4 +26,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - [Coolors Color Scheme](https://coolors.co/161215-5cc8ff-fffafb-ff6b6b-9b7ede)
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Styled Icons Explorer](https://styled-icons.js.org/?s=message)
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.

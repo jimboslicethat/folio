@@ -1,6 +1,4 @@
-import CommentIcon from '@material-ui/icons/Comment'
-import FavoriteIcon from '@material-ui/icons/Favorite'
-import LabelIcon from '@material-ui/icons/Label'
+import { Like, CommentDots, Label } from '@styled-icons/boxicons-solid'
 import React from 'react'
 import useSWR from 'swr'
 
@@ -24,21 +22,19 @@ export default function BlogPosts(): React.ReactElement {
               <div>{post.description}</div>
               <div className={styles.metadata}>
                 <span className={styles.metadataContent}>
-                  <FavoriteIcon style={{ ...iconStyles, color: '#FF6B6B' }} />
+                  <Like size="1.25rem" style={{ ...iconStyles, color: '#FF6B6B' }} />
                   {post.positive_reactions_count}
                 </span>
                 <span className={styles.metadataContent}>
-                  <CommentIcon style={iconStyles} />
+                  <CommentDots size="1.25rem" style={iconStyles} />
                   {post.comments_count}
                 </span>
                 <span className={styles.metadataContent}>
-                  <LabelIcon style={iconStyles} />
+                  <Label size="1.25rem" style={iconStyles} />
                   <span className={styles.emphasized}>{post.tag_list.map(tag => `#${tag} `)}</span>
                 </span>
                 <span className={styles.metadataContent}>
-                  <span className={styles.emphasized}>
-                    {new Date(post.published_at).toDateString()}
-                  </span>
+                  <span>{new Date(post.published_at).toDateString()}</span>
                 </span>
               </div>
             </a>

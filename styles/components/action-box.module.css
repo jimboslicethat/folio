@@ -1,0 +1,23 @@
+.container {
+  background-color: #221c20;
+  border: 2px solid #5cc8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  color: #5cc8ff;
+  border-radius: 5px;
+  padding: 0.75em;
+  margin: 8px;
+  transition: all .2s ease-in-out;
+}
+.container:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .quote {
+    font-size: 16px;
+  }
+}
