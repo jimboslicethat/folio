@@ -1,13 +1,36 @@
 .container {
   min-height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-@media (max-width: 600px) {	
-  .container {	
-    flex-direction: column;
-  }
+.list {
+  border-radius: 5px;
+  list-style-type:none;
+}
+.listItem {
+  background-color: #FFFAFB;
+  color: #161215;
+  border-radius: 5px;
+  padding: 1.5rem;
+}
+
+.title {
+  color: #5CC8FF;
+}
+.metadata {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+.metadataContent {
+  display: inline-flex;
+  align-items: center;
+}
+.emphasized {
+  font-weight: 600;
 }
