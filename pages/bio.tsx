@@ -99,11 +99,7 @@ export default function Bio(): React.ReactElement {
         initial="hidden"
         animate="visible"
       >
-        <motion.section
-          className={styles.contentSectionLeft}
-          variants={item}
-          whileHover={{ scale: 1.02 }}
-        >
+        <motion.section className={styles.contentSectionLeft} variants={item}>
           <h2>
             <BookHeart size="36" />
             &nbsp;What I Care About
@@ -123,11 +119,7 @@ export default function Bio(): React.ReactElement {
             ))}
           </ul>
         </motion.section>
-        <motion.section
-          className={styles.contentSectionMiddle}
-          variants={item}
-          whileHover={{ scale: 1.02 }}
-        >
+        <motion.section className={styles.contentSectionMiddle} variants={item}>
           <h2>
             <Brain size="36" />
             &nbsp;Skills / Expertise
@@ -147,11 +139,7 @@ export default function Bio(): React.ReactElement {
             ))}
           </ul>
         </motion.section>
-        <motion.section
-          className={styles.contentSectionRight}
-          variants={item}
-          whileHover={{ scale: 1.02 }}
-        >
+        <motion.section className={styles.contentSectionRight} variants={item}>
           <h2>
             <Game size="36" />
             Hobbies & Interests
