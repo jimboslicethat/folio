@@ -55,7 +55,7 @@ export default function Index(): React.ReactElement {
         </motion.span>
         <motion.span variants={item}>
           <ActionBox
-            href="/find-me"
+            href="/contact-me"
             icon={<MessageDetail style={iconStyles} size="48" />}
             text="Reach out on social"
           />
