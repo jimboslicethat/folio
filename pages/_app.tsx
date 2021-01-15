@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
+import { Github, LinkedinSquare, Twitter } from '@styled-icons/boxicons-logos'
 import { motion, AnimatePresence } from 'framer-motion'
 import Head from 'next/head'
 import React from 'react'
@@ -12,6 +13,7 @@ interface Params {
   pageProps: unknown
   router: { pathname: string }
 }
+
 function MyApp({ Component, pageProps, router }: Params): React.ReactElement {
   const spring = {
     type: 'spring',
@@ -47,7 +49,25 @@ function MyApp({ Component, pageProps, router }: Params): React.ReactElement {
         >
           <Component {...pageProps} />
         </motion.main>
-        <footer>Powered by Next.js</footer>
+        <footer>
+          <div>
+            <a href="https://github.com/jimboslicethat" target="_blank" rel="noreferrer">
+              <Github size="40" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jamesandersonwalsh/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedinSquare size="40" />
+            </a>
+            <a href="https://twitter.com/jimboslicethat" target="_blank" rel="noreferrer">
+              <Twitter size="40" />
+            </a>
+          </div>
+          <span>Powered by Next.js</span>
+          <span>Hosted using Vercel</span>
+        </footer>
       </div>
     </AnimatePresence>
   )

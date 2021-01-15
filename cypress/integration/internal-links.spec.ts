@@ -8,8 +8,14 @@ describe('Internal links navigation', () => {
   })
 
   it('includes blog link', () => {
-    const blogPostLink = '/blog'
+    cy.get(`a[href*="/blog"]`).first().should('exist').click()
+  })
 
-    cy.get(`a[href*="${blogPostLink}"]`).should('exist').click()
+  it('includes bio link', () => {
+    cy.get(`a[href*="/bio"]`).first().should('exist').click()
+  })
+
+  it('includes projects link', () => {
+    cy.get(`a[href*="/projects"]`).first().should('exist').click()
   })
 })
