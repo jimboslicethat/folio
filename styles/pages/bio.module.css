@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.contentSection, .contentSectionLeft, .contentSectionMiddle, .contentSectionRight {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.contentSectionLeft h2 {
+  color: #5CC8FF;
+}
+.contentSectionMiddle h2 {
+  color: #9B7EDE;
+}
+.contentSectionRight h2 {
+  color: #FF6B6B;
+}
+
+@media (max-width: 600px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
