@@ -4,3 +4,60 @@
   justify-content: center;
   align-items: center;
 }
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.contentSection, .contentSectionLeft, .contentSectionRight {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  align-items: baseline;
+}
+
+.contentSectionLeft .sectionTitle {
+  color: #5CC8FF;
+}
+.contentSectionRight .sectionTitle {
+  color: #9B7EDE;
+}
+
+.projectList {
+  list-style: none;
+  padding: 0.2rem;
+}
+.projectList h3 {
+  margin-bottom: 0.5rem;
+}
+.projectList h4 {
+  font-weight: 400;
+  margin: 0.2rem;
+}
+
+.contentSectionLeft a {
+  color: #5CC8FF;
+  margin-right: 4px;
+}
+.contentSectionRight a {
+  color: #9B7EDE;
+  margin-right: 4px;
+}
+.learnMore {
+  color: #FF6B6B;
+  margin-left: 4px;
+}
+.learnMore:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.projectActions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
