@@ -15,7 +15,7 @@ export default function Bio(): React.ReactElement {
       />
       <h1>A Little About Me</h1>
       <div className={styles.content}>
-        <section className={styles.contentSectionMiddle}>
+        <section className={styles.contentSectionLeft}>
           <h2>What I Care About</h2>
           <hr />
           <p>
@@ -29,7 +29,7 @@ export default function Bio(): React.ReactElement {
             like).
           </p>
         </section>
-        <section className={styles.contentSectionLeft}>
+        <section className={styles.contentSectionMiddle}>
           <h2>Skills / Expertise</h2>
           <hr />
           <p>
