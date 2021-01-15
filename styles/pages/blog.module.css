@@ -14,6 +14,7 @@
   border: 3px solid #5CC8FF;
   border-radius: 5px;
   padding: 1.5rem;
+  margin: 0.75rem;
   transition: all .2s ease-in-out;
 }
 .listItem:hover {

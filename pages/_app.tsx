@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
+import { motion, AnimatePresence } from 'framer-motion'
 import Head from 'next/head'
 import React from 'react'
 
@@ -9,10 +10,17 @@ import '../styles/globals.css'
 interface Params {
   Component: React.ComponentType
   pageProps: unknown
+  router: { pathname: string }
 }
-function MyApp({ Component, pageProps }: Params): React.ReactElement {
+function MyApp({ Component, pageProps, router }: Params): React.ReactElement {
+  const spring = {
+    type: 'spring',
+    damping: 20,
+    stiffness: 100,
+    when: 'afterChildren'
+  }
   return (
-    <>
+    <AnimatePresence>
       <Head>
         <title>James Walsh</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -29,12 +37,19 @@ function MyApp({ Component, pageProps }: Params): React.ReactElement {
       </Head>
       <div id="pageContainer">
         <NavBar />
-        <main id="contentWrap">
+        <motion.main
+          transition={spring}
+          key={router.pathname}
+          initial={{ y: 400, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -400, opacity: 0 }}
+          id="contentWrap"
+        >
           <Component {...pageProps} />
-        </main>
+        </motion.main>
         <footer>Powered by Next.js</footer>
       </div>
-    </>
+    </AnimatePresence>
   )
 }
 

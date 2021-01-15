@@ -1,4 +1,5 @@
 import { Like, CommentDots, Label } from '@styled-icons/boxicons-solid'
+import { motion } from 'framer-motion'
 import React from 'react'
 import useSWR from 'swr'
 
@@ -6,17 +7,37 @@ import styles from '../styles/pages/blog.module.css'
 
 const iconStyles = { color: '#0088CC', marginRight: 4 }
 
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.3
+    }
+  }
+}
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  }
+}
+
 export default function Blog(): React.ReactElement {
   const { data } = useSWR('/api/posts', () => fetch('/api/posts').then(res => res.json()))
 
-  if (!data) return <div>loading...</div>
+  if (!data) return null
 
   return (
     <div className={styles.container}>
       <h1>Blog Posts</h1>
-      <li className={styles.list}>
+      <motion.ul className={styles.list} variants={container} initial="hidden" animate="visible">
         {data.map(post => (
-          <ul key={post.id} className={styles.listItem}>
+          <motion.li key={post.id} className={styles.listItem} variants={item}>
             <a href={post.url} target="_blank" rel="noreferrer">
               <h2 className={styles.title}>{post.title}</h2>
               <div>{post.description}</div>
@@ -38,9 +59,9 @@ export default function Blog(): React.ReactElement {
                 </span>
               </div>
             </a>
-          </ul>
+          </motion.li>
         ))}
-      </li>
+      </motion.ul>
     </div>
   )
 }
