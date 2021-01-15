@@ -25,6 +25,13 @@
   color: #FF6B6B;
 }
 
+.bioList {
+  max-width: 50rem;
+  list-style: none;
+  margin: 0.25rem;
+  padding: 0;
+}
+
 @media (max-width: 600px) {
   .content {
     display: flex;
