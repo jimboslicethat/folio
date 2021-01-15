@@ -42,5 +42,16 @@
 @media (max-width: 600px) {
   .title {
     font-size: 36px;
+    text-align: center;
+  }
+  .callToActionSection {
+    display: flex;
+    flex-direction: column;
+  }
+  .typewriter {
+    white-space: normal;
+    letter-spacing: 0;
+    animation: none;
+    border: none;
   }
 }
