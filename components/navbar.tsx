@@ -19,6 +19,14 @@ export default function NavBar(): React.ReactElement {
       )
     },
     {
+      href: '/projects',
+      content: (
+        <Tooltip title="See projects" placement="bottom" arrow>
+          <CodeBlock size="40" />
+        </Tooltip>
+      )
+    },
+    {
       href: '/blog',
       content: (
         <Tooltip title="Go to Blog" placement="bottom" arrow>
@@ -31,14 +39,6 @@ export default function NavBar(): React.ReactElement {
       content: (
         <Tooltip title="Read bio" placement="bottom" arrow>
           <InfoCircle size="40" />
-        </Tooltip>
-      )
-    },
-    {
-      href: '/projects',
-      content: (
-        <Tooltip title="See projects" placement="bottom" arrow>
-          <CodeBlock size="40" />
         </Tooltip>
       )
     }

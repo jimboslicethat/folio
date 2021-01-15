@@ -55,9 +55,9 @@ export default function Index(): React.ReactElement {
         </motion.span>
         <motion.span variants={item}>
           <ActionBox
-            href="/contact-me"
-            icon={<MessageDetail style={iconStyles} size="48" />}
-            text="Reach out on social"
+            href="/blog"
+            icon={<BookReader style={iconStyles} size="48" />}
+            text="Read my blog posts"
           />
         </motion.span>
         <motion.span variants={item}>
@@ -69,9 +69,9 @@ export default function Index(): React.ReactElement {
         </motion.span>
         <motion.span variants={item}>
           <ActionBox
-            href="/blog"
-            icon={<BookReader style={iconStyles} size="48" />}
-            text="Read my blog posts"
+            href="/contact-me"
+            icon={<MessageDetail style={iconStyles} size="48" />}
+            text="Reach out on social"
           />
         </motion.span>
       </motion.section>
