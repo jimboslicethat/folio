@@ -43,21 +43,41 @@
   color: #5CC8FF;
   margin-right: 4px;
 }
+.contentSectionLeft a:hover {
+  text-decoration: underline;
+}
 .contentSectionRight a {
   color: #9B7EDE;
   margin-right: 4px;
 }
+.contentSectionRight a:hover {
+  text-decoration: underline;
+}
 .learnMore {
   color: #FF6B6B;
+  padding: 1px 4px 1px 4px;
+  border-radius: 3px;
   margin-left: 4px;
 }
 .learnMore:hover {
+  background-color: #2d252b;
   cursor: pointer;
-  text-decoration: underline;
 }
 
 .projectActions {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.moreInfo {
+  align-items: center;
+  max-width: 28em;
+}
+
+.contactMeHeader {
+  margin-top: 6rem;
+}
+.contactMeLink {
+  text-decoration: underline;
 }
