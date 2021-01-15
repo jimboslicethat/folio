@@ -35,9 +35,25 @@ export default function Blog(): React.ReactElement {
   return (
     <div className={styles.container}>
       <h1>Blog Posts</h1>
+      <h3 className={styles.subtitle}>
+        Powered by&nbsp;
+        <a
+          className={styles.devToLink}
+          href="https://dev.to/jimboslicethat"
+          target="_blank"
+          rel="noreferrer"
+        >
+          dev.to
+        </a>
+      </h3>
       <motion.ul className={styles.list} variants={container} initial="hidden" animate="visible">
         {data.map(post => (
-          <motion.li key={post.id} className={styles.listItem} variants={item}>
+          <motion.li
+            key={post.id}
+            className={styles.listItem}
+            variants={item}
+            whileHover={{ scale: 1.02 }}
+          >
             <a href={post.url} target="_blank" rel="noreferrer">
               <h2 className={styles.title}>{post.title}</h2>
               <div>{post.description}</div>
