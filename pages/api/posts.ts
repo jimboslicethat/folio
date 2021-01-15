@@ -1,6 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-export default async (_req: NextApiRequest, res: NextApiResponse): Promise<void> => {
+export default async function devToProxyRouter(
+  _req: NextApiRequest,
+  res: NextApiResponse
+): Promise<void> {
   const blogPosts = await getBlogPosts()
   res.json(blogPosts)
 }
