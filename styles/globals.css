@@ -29,6 +29,11 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+#footer-content-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 a {
   color: inherit;
@@ -37,6 +42,12 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  #footer-content-left {
+    display: none;
+  }
 }
 
 /*

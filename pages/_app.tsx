@@ -2,6 +2,7 @@
 import { Github, LinkedinSquare, Twitter } from '@styled-icons/boxicons-logos'
 import { motion, AnimatePresence } from 'framer-motion'
 import Head from 'next/head'
+import Image from 'next/image'
 import React from 'react'
 
 import NavBar from 'components/navbar'
@@ -50,7 +51,7 @@ function MyApp({ Component, pageProps, router }: Params): React.ReactElement {
           <Component {...pageProps} />
         </motion.main>
         <footer>
-          <div>
+          <div id="footer-content-left">
             <a href="https://github.com/jimboslicethat" target="_blank" rel="noreferrer">
               <Github size="40" />
             </a>
@@ -65,8 +66,10 @@ function MyApp({ Component, pageProps, router }: Params): React.ReactElement {
               <Twitter size="40" />
             </a>
           </div>
-          <span>Powered by Next.js</span>
-          <span>Hosted using Vercel</span>
+          <div id="footer-content-right">
+            <span>Powered by Next.js and &nbsp;</span>
+            <Image src="/vercel.svg" alt="Vercel Logo" width={64} height={64} />
+          </div>
         </footer>
       </div>
     </AnimatePresence>
