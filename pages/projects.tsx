@@ -89,6 +89,7 @@ export default function Projects(): React.ReactElement {
                     tabIndex={0}
                     role="button"
                     className={styles.learnMore}
+                    onClick={handleLearnMoreClick(project.title)}
                     onKeyPress={handleLearnMoreClick(project.title)}
                   >
                     Learn More
