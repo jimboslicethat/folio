@@ -7,7 +7,7 @@ My portfolio site. Powered by next.js, react, & typescript.
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 
-## Getting Started
+## Getting Started 😸
 1. Configure secrets in `.env.local` *(See `.env.local.example`)*
 1. Run the development server:
 
@@ -17,12 +17,17 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Testing 🧪
+Folio is e2e tested using [Cypress](https://www.cypress.io/).
+1. Run tests headless by running: `yarn cypress:run`
+1. Run tests in the browser running: `yarn cypress:open`
+
 ## CI/CD 🚀
 
 - Continuous integration using Github Actions. Navigate to the actions tab above to see more.
 - Project is auto-deployed using Vercel.
 
-### Additional Resources 🤓
+## Additional Resources 🤓
 
 - [Coolors Color Scheme](https://coolors.co/161215-5cc8ff-fffafb-ff6b6b-9b7ede)
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
