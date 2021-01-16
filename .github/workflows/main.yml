@@ -44,6 +44,9 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    env:
+      DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+      DEVTO_USERNAME: ${{ secrets.DEVTO_USERNAME }}
 
     steps:
       - name: Checkout Repo
