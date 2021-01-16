@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps, router }: Params): React.ReactElement {
     when: 'afterChildren'
   }
   return (
-    <AnimatePresence>
+    <>
       <Head>
         <title>James Walsh</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -38,41 +38,43 @@ function MyApp({ Component, pageProps, router }: Params): React.ReactElement {
 
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <div id="pageContainer">
-        <NavBar />
-        <motion.main
-          transition={spring}
-          key={router.pathname}
-          initial={{ y: 400, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -400, opacity: 0 }}
-          id="contentWrap"
-        >
-          <Component {...pageProps} />
-        </motion.main>
-        <footer>
-          <div id="footer-content-left">
-            <a href="https://github.com/jimboslicethat" target="_blank" rel="noreferrer">
-              <Github size="40" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/jamesandersonwalsh/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <LinkedinSquare size="40" />
-            </a>
-            <a href="https://twitter.com/jimboslicethat" target="_blank" rel="noreferrer">
-              <Twitter size="40" />
-            </a>
-          </div>
-          <div id="footer-content-right">
-            <span>Powered by Next.js and &nbsp;</span>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={64} height={64} />
-          </div>
-        </footer>
-      </div>
-    </AnimatePresence>
+      <AnimatePresence>
+        <div id="pageContainer">
+          <NavBar />
+          <motion.main
+            transition={spring}
+            key={router.pathname}
+            initial={{ y: 400, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -400, opacity: 0 }}
+            id="contentWrap"
+          >
+            <Component {...pageProps} />
+          </motion.main>
+          <footer>
+            <div id="footer-content-left">
+              <a href="https://github.com/jimboslicethat" target="_blank" rel="noreferrer">
+                <Github size="40" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jamesandersonwalsh/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <LinkedinSquare size="40" />
+              </a>
+              <a href="https://twitter.com/jimboslicethat" target="_blank" rel="noreferrer">
+                <Twitter size="40" />
+              </a>
+            </div>
+            <div id="footer-content-right">
+              <span>Powered by Next.js and &nbsp;</span>
+              <Image src="/vercel.svg" alt="Vercel Logo" width={64} height={64} />
+            </div>
+          </footer>
+        </div>
+      </AnimatePresence>
+    </>
   )
 }
 
