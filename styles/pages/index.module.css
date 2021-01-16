@@ -18,7 +18,7 @@
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 70% }
+  to { width: 960px }
 }
 
 @keyframes blink-caret {
@@ -39,7 +39,7 @@
   
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .title {
     font-size: 36px;
     text-align: center;
