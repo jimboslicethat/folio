@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import React from 'react'
 
-import styles from '../styles/components/action-box.module.css'
+import styles from '../../styles/components/action-box.module.css'
 
 interface Props {
   icon: React.ReactNode

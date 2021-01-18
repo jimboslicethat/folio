@@ -1,9 +1,11 @@
 import { Github } from '@styled-icons/boxicons-logos'
 import { CodeAlt, Coffee, Link as LinkIcon, MessageDetail } from '@styled-icons/boxicons-regular'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import useSWR from 'swr'
 
+import { container, item } from '../shared/stagger-child-motion'
 import styles from '../styles/pages/projects.module.css'
 
 export default function Projects(): React.ReactElement {
@@ -27,8 +29,13 @@ export default function Projects(): React.ReactElement {
   return (
     <div className={styles.container}>
       <h1>My Projects</h1>
-      <div className={styles.content}>
-        <section className={styles.contentSectionLeft}>
+      <motion.div
+        className={styles.content}
+        variants={container}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.section className={styles.contentSectionLeft} variants={item}>
           <h2 className={styles.sectionTitle}>
             <Coffee size="36" />
             &nbsp;Professional
@@ -68,8 +75,8 @@ export default function Projects(): React.ReactElement {
               </li>
             ))}
           </ul>
-        </section>
-        <section className={styles.contentSectionRight}>
+        </motion.section>
+        <motion.section className={styles.contentSectionRight} variants={item}>
           <h2 className={styles.sectionTitle}>
             <Github size="36" />
             &nbsp;Hobby & Open Source
@@ -109,8 +116,8 @@ export default function Projects(): React.ReactElement {
               </li>
             ))}
           </ul>
-        </section>
-      </div>
+        </motion.section>
+      </motion.div>
       <section>
         <h2 className={styles.contactMeHeader}>
           <MessageDetail size="48" />

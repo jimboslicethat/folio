@@ -3,29 +3,10 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import useSWR from 'swr'
 
+import { container, item } from '../shared/stagger-child-motion'
 import styles from '../styles/pages/blog.module.css'
 
 const iconStyles = { color: '#0088CC', marginRight: 4 }
-
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.3
-    }
-  }
-}
-
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1
-  }
-}
 
 export default function Blog(): React.ReactElement {
   const { data } = useSWR('/api/posts', () => fetch('/api/posts').then(res => res.json()))

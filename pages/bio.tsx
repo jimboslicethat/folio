@@ -20,6 +20,7 @@ import React from 'react'
 import Avatar from 'react-avatar'
 import useSWR from 'swr'
 
+import { container, item } from '../shared/stagger-child-motion'
 import styles from '../styles/pages/bio.module.css'
 
 const whatICareAboutIconStyles = {
@@ -30,24 +31,6 @@ const skillsIconStyles = {
 }
 const hobbiesIconStyles = {
   color: '#FF6B6B'
-}
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.3
-    }
-  }
-}
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1
-  }
 }
 
 const bioDataIconMap = {

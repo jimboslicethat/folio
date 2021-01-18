@@ -6,7 +6,7 @@ import { CodeBlock, Home, InfoCircle } from '@styled-icons/boxicons-regular'
 import Link from 'next/link'
 import React from 'react'
 
-import styles from '../styles/components/navbar.module.css'
+import styles from '../../styles/components/navbar.module.css'
 
 export default function NavBar(): React.ReactElement {
   const internalLinks = [
