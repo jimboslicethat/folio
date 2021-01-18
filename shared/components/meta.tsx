@@ -5,7 +5,7 @@ export default function Meta(): React.ReactElement {
   const description = 'Portfolio, Blog & Bio.'
   const siteUrl = 'https://jameswalsh.tech'
   const cardSiteTitle = 'James Walsh | Software Engineer'
-  const imageUrl = '/avatar.jpeg'
+  const imageUrl = 'https://jameswalsh.tech/avatar.jpeg'
 
   return (
     <Head>
@@ -21,6 +21,7 @@ export default function Meta(): React.ReactElement {
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={cardSiteTitle} />
+      <meta property="twitter:image" content={imageUrl} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:site" content="@jimboslicethat" />
       <meta name="twitter:creator" content="@jimboslicethat" />
