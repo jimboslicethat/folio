@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React from 'react'
 
 export default function Meta(): React.ReactElement {
-  const description = 'Portfolio, Blog & Bio.'
+  const description = `Hey, I'm James 🤙. I'm a software engineer who lives and works in Salt Lake City. The following is my digital biz card, portfolio, blog, & biography.`
   const siteUrl = 'https://jameswalsh.tech'
   const cardSiteTitle = 'James Walsh | Software Engineer'
   const imageUrl = 'https://jameswalsh.tech/avatar.jpeg'
