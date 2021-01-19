@@ -10,6 +10,7 @@ export default function Meta(): React.ReactElement {
   return (
     <Head>
       <title>James Walsh</title>
+      <meta name="description" content={description} />
 
       <meta name="og:description" content={description} />
       <meta property="og:locale" content="en_US" />
