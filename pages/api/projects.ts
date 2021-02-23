@@ -65,16 +65,6 @@ function getProjects(): ProjectItem[] {
       ]
     },
     {
-      title: 'IntegraCore Public Site (archived)',
-      type: ProjectType.Professional,
-      href: 'https://web.archive.org/web/20150820072637/http://www.integracore.com/',
-      description: 'Public site & white papers for IntegraCore (now VisibleCSM).',
-      moreInfo: [
-        'Managed the public www site which was originally written in PHP and JQuery.',
-        'Performed regular updates to styling, layout as the marketing teams needs changed.'
-      ]
-    },
-    {
       title: 'Portfolio',
       type: ProjectType.Hobby,
       href: 'https://github.com/jimboslicethat/folio',

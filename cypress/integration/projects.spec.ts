@@ -8,9 +8,6 @@ describe('Projects page', () => {
     cy.get(`a[href="https://help.pluralsight.com/help/analytics"]`).should('exist')
     cy.get(`a[href="https://play.aidungeon.io/main/landing"]`).should('exist')
     cy.get(`a[href="https://www.visiblescm.com/fulfillment/"]`).should('exist')
-    cy.get(
-      `a[href="https://web.archive.org/web/20150820072637/http://www.integracore.com/"]`
-    ).should('exist')
   })
 
   it('links to all hobby projects', () => {
