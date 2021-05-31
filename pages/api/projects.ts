@@ -21,6 +21,17 @@ export default async (_req: NextApiRequest, res: NextApiResponse): Promise<void>
 function getProjects(): ProjectItem[] {
   return [
     {
+      title: 'Podium Campaigns',
+      type: ProjectType.Professional,
+      href: 'https://www.podium.com/campaigns/',
+      description: 'Conversational SMS marketing that gets a response.',
+      moreInfo: [
+        'UI/UX software engineer building the campaigns web client to be the best possible experience it can be.',
+        `Championed enforcing semantic HTML, better accessibility standards, & improving the page's CLS rating.`,
+        'Working in React, with GraphQL, styled-components, & the podium design system component library.'
+      ]
+    },
+    {
       title: 'Pluralsight Channels',
       type: ProjectType.Professional,
       href: 'https://www.pluralsight.com/product/channels',
