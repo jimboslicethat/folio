@@ -1,14 +1,13 @@
-import { CodeBlock, BookReader, MessageDetail, InfoCircle } from '@styled-icons/boxicons-regular'
+import { Icon } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React from 'react'
+import { BiCodeBlock, BiBookContent, BiMessageDetail, BiInfoCircle } from 'react-icons/bi'
 
 import ActionBox from '../shared/components/action-box'
 import { container, item } from '../shared/stagger-child-motion'
 import styles from '../styles/pages/index.module.css'
 
-const iconStyles = {
-  color: '#9B7EDE'
-}
+const ICON_COLOR = '#9B7EDE'
 
 export default function Index(): React.ReactElement {
   return (
@@ -32,28 +31,28 @@ export default function Index(): React.ReactElement {
         <motion.span variants={item}>
           <ActionBox
             href="/projects"
-            icon={<CodeBlock style={iconStyles} size="48" />}
+            icon={<Icon as={BiCodeBlock} color={ICON_COLOR} boxSize="48" />}
             text="Check out my work"
           />
         </motion.span>
         <motion.span variants={item}>
           <ActionBox
             href="/blog"
-            icon={<BookReader style={iconStyles} size="48" />}
+            icon={<Icon as={BiBookContent} color={ICON_COLOR} boxSize="48" />}
             text="Read my blog posts"
           />
         </motion.span>
         <motion.span variants={item}>
           <ActionBox
             href="/bio"
-            icon={<InfoCircle style={iconStyles} size="48" />}
+            icon={<Icon as={BiInfoCircle} color={ICON_COLOR} boxSize="48" />}
             text="Learn more about me"
           />
         </motion.span>
         <motion.span variants={item}>
           <ActionBox
             href="/contact-me"
-            icon={<MessageDetail style={iconStyles} size="48" />}
+            icon={<Icon as={BiMessageDetail} color={ICON_COLOR} boxSize="48" />}
             text="Reach out on social"
           />
         </motion.span>

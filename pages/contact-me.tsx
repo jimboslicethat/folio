@@ -1,39 +1,57 @@
-import { Github, LinkedinSquare, Twitter } from '@styled-icons/boxicons-logos'
-import { MailSend } from '@styled-icons/boxicons-regular'
+import { Grid, GridItem, Link, Heading, Text, Icon } from '@chakra-ui/react'
+import styled from '@emotion/styled'
 import React from 'react'
+import { GrGithub, GrLinkedin, GrTwitter, GrMail } from 'react-icons/gr'
 
-import styles from '../styles/pages/contact-me.module.css'
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+const StyledLink = styled(Link)`
+  display: flex;
+  text-align: center;
+  line-height: 4rem;
+`
 
 export default function ContactMe(): React.ReactElement {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Contact Me</h1>
-      <section className={styles.contactItems}>
-        <h2 className={styles.contactItem}>
-          <a href="https://linkedin.com/in/jamesandersonwalsh">
-            <LinkedinSquare size="80" />
-            LinkedIn
-          </a>
-        </h2>
-        <h2 className={styles.contactItem}>
-          <a href="https://github.com/jimboslicethat">
-            <Github size="80" />
-            Github
-          </a>
-        </h2>
-        <h2 className={styles.contactItem}>
-          <a href="https://twitter.com/jimboslicethat">
-            <Twitter size="80" />
-            Twitter
-          </a>
-        </h2>
-        <h2 className={styles.contactItem}>
-          <a href="mailto:jameswalsh@hey.com">
-            <MailSend size="80" />
-            Email
-          </a>
-        </h2>
-      </section>
-    </div>
+    <Container>
+      <Heading as="h1" borderBottom="5px solid #fff">
+        Contact Me
+      </Heading>
+      <Grid
+        templateColumns="auto auto"
+        templateRows="auto auto"
+        as="section"
+        aria-label="Social media list"
+      >
+        <GridItem margin="3rem">
+          <StyledLink href="https://linkedin.com/in/jamesandersonwalsh" isExternal>
+            <Icon as={GrLinkedin} boxSize="64px" marginRight="16px" />
+            <Text>LinkedIn</Text>
+          </StyledLink>
+        </GridItem>
+        <GridItem margin="3rem">
+          <StyledLink href="https://github.com/jimboslicethat" isExternal>
+            <Icon as={GrGithub} boxSize="64px" marginRight="16px" />
+            <Text>Github</Text>
+          </StyledLink>
+        </GridItem>
+        <GridItem margin="3rem">
+          <StyledLink href="https://twitter.com/jimboslicethat" isExternal>
+            <Icon as={GrTwitter} boxSize="64px" marginRight="16px" />
+            <Text>Twitter</Text>
+          </StyledLink>
+        </GridItem>
+        <GridItem margin="3rem">
+          <StyledLink href="mailto:jameswalsh@hey.com" isExternal>
+            <Icon as={GrMail} boxSize="64px" marginRight="16px" />
+            <Text>Email</Text>
+          </StyledLink>
+        </GridItem>
+      </Grid>
+    </Container>
   )
 }

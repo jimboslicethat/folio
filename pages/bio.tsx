@@ -1,56 +1,54 @@
 /* eslint-disable react/no-unescaped-entities */
-import {
-  Brain,
-  BookHeart,
-  Bulb,
-  Conversation,
-  CodeAlt,
-  Coffee,
-  Data,
-  Game,
-  HappyBeaming,
-  ListCheck,
-  Server,
-  Sun,
-  TestTube
-} from '@styled-icons/boxicons-regular'
-import { BusSchool, HomeSmile, Hot, Keyboard, Tree } from '@styled-icons/boxicons-solid'
+
+import { Icon } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React from 'react'
 import Avatar from 'react-avatar'
+import {
+  BiBusSchool,
+  BiHomeSmile,
+  BiBulb,
+  BiConversation,
+  BiCodeAlt,
+  BiCoffee,
+  BiData,
+  BiHappyBeaming,
+  BiListCheck,
+  BiServer,
+  BiSun,
+  BiTestTube
+} from 'react-icons/bi'
+import {
+  GiSlicedBread,
+  GiPineTree,
+  GiMineralHeart,
+  GiBrain,
+  GiKeyboard,
+  GiGamepad
+} from 'react-icons/gi'
 import useSWR from 'swr'
 
 import { container, item } from '../shared/stagger-child-motion'
 import styles from '../styles/pages/bio.module.css'
 
-const whatICareAboutIconStyles = {
-  color: '#5CC8FF'
-}
-const skillsIconStyles = {
-  color: '#9B7EDE'
-}
-const hobbiesIconStyles = {
-  color: '#FF6B6B'
-}
-
 const bioDataIconMap = {
-  'Full Stack Developer': <CodeAlt style={whatICareAboutIconStyles} size="20" />,
-  'Product Dev Lifecycle': <HappyBeaming style={whatICareAboutIconStyles} size="20" />,
-  'Software Craftsmanship': <Conversation style={whatICareAboutIconStyles} size="20" />,
-  'Testing Philosophy': <TestTube style={whatICareAboutIconStyles} size="20" />,
-  'Lean Development': <ListCheck style={whatICareAboutIconStyles} size="20" />,
-  'Front End': <CodeAlt style={skillsIconStyles} size="20" />,
-  'Server side': <Server style={skillsIconStyles} size="20" />,
-  Testing: <TestTube style={skillsIconStyles} size="20" />,
-  Data: <Data style={skillsIconStyles} size="20" />,
-  Architecture: <Bulb style={skillsIconStyles} size="20" />,
-  'Studied At': <BusSchool style={skillsIconStyles} size="20" />,
-  'Outdoorsy Stuff': <Tree style={hobbiesIconStyles} size="20" />,
-  'Indoorsy Stuff': <HomeSmile style={hobbiesIconStyles} size="20" />,
-  'Coffee Nut': <Coffee style={hobbiesIconStyles} size="20" />,
-  'Keeb Enthusiast': <Keyboard style={hobbiesIconStyles} size="20" />,
-  Baking: <Hot style={hobbiesIconStyles} size="20" />,
-  'Survivor Fan': <Sun style={hobbiesIconStyles} size="20" />
+  'Full Stack Developer': <Icon as={BiCodeAlt} color="#5CC8FF" boxSize="20px" />,
+  'Product Dev Lifecycle': <Icon as={BiHappyBeaming} color="#5CC8FF" boxSize="20px" />,
+  'Software Craftsmanship': <Icon as={BiConversation} color="#5CC8FF" boxSize="20px" />,
+  'Testing Philosophy': <Icon as={BiTestTube} color="#5CC8FF" boxSize="20px" />,
+  'Lean Development': <Icon as={BiListCheck} color="#5CC8FF" boxSize="20px" />,
+  'Front End': <Icon as={BiCodeAlt} color="#9B7EDE" boxSize="20px" />,
+  'Server side': <Icon as={BiServer} color="#9B7EDE" boxSize="20px" />,
+  Testing: <Icon as={BiTestTube} color="#9B7EDE" boxSize="20px" />,
+  Data: <Icon as={BiData} color="#9B7EDE" boxSize="20px" />,
+  Architecture: <Icon as={BiBulb} color="#9B7EDE" boxSize="20px" />,
+  'Studied At': <Icon as={BiBusSchool} color="#9B7EDE" boxSize="20px" />,
+  'Outdoorsy Stuff': <Icon as={GiPineTree} color="#FF6B6B" boxSize="20px" />,
+  'Indoorsy Stuff': <Icon as={BiHomeSmile} color="#FF6B6B" boxSize="20px" />,
+  'Coffee Nut': <Icon as={BiCoffee} color="#FF6B6B" boxSize="20px" />,
+  'Keeb Enthusiast': <Icon as={GiKeyboard} color="#FF6B6B" boxSize="20px" />,
+  Baking: <Icon as={GiSlicedBread} color="#FF6B6B" boxSize="20px" />,
+  'Survivor Fan': <Icon as={BiSun} color="#FF6B6B" boxSize="20px" />
 }
 
 export default function Bio(): React.ReactElement {
@@ -84,7 +82,7 @@ export default function Bio(): React.ReactElement {
       >
         <motion.section className={styles.contentSectionLeft} variants={item}>
           <h2>
-            <BookHeart size="36" />
+            <Icon as={GiMineralHeart} boxSize="36px" />
             &nbsp;What I Care About
           </h2>
           <hr />
@@ -104,7 +102,7 @@ export default function Bio(): React.ReactElement {
         </motion.section>
         <motion.section className={styles.contentSectionMiddle} variants={item}>
           <h2>
-            <Brain size="36" />
+            <Icon as={GiBrain} boxSize="36px" />
             &nbsp;Skills / Expertise
           </h2>
           <hr />
@@ -124,7 +122,7 @@ export default function Bio(): React.ReactElement {
         </motion.section>
         <motion.section className={styles.contentSectionRight} variants={item}>
           <h2>
-            <Game size="36" />
+            <Icon as={GiGamepad} boxSize="36px" />
             Hobbies & Interests
           </h2>
           <hr />

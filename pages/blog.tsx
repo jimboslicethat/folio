@@ -1,12 +1,11 @@
-import { Like, CommentDots, Label } from '@styled-icons/boxicons-solid'
+import { Icon } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React from 'react'
+import { BiLike, BiCommentDots, BiLabel } from 'react-icons/bi'
 import useSWR from 'swr'
 
 import { container, item } from '../shared/stagger-child-motion'
 import styles from '../styles/pages/blog.module.css'
-
-const iconStyles = { color: '#0088CC', marginRight: 4 }
 
 export default function Blog(): React.ReactElement {
   const { data } = useSWR('/api/posts', () => fetch('/api/posts').then(res => res.json()))
@@ -40,15 +39,15 @@ export default function Blog(): React.ReactElement {
               <div>{post.description}</div>
               <div className={styles.metadata}>
                 <span className={styles.metadataContent}>
-                  <Like size="1.25rem" style={{ ...iconStyles, color: '#FF6B6B' }} />
+                  <Icon as={BiLike} boxSize="1.25rem" color="#FF6B6B" marginRight="4px" />
                   {post.positive_reactions_count}
                 </span>
                 <span className={styles.metadataContent}>
-                  <CommentDots size="1.25rem" style={iconStyles} />
+                  <Icon as={BiCommentDots} boxSize="1.25rem" color="#0088CC" marginRight="4px" />
                   {post.comments_count}
                 </span>
                 <span className={styles.metadataContent}>
-                  <Label size="1.25rem" style={iconStyles} />
+                  <Icon as={BiLabel} boxSize="1.25rem" color="#0088CC" marginRight="4px" />
                   <span className={styles.emphasized}>{post.tag_list.map(tag => `#${tag} `)}</span>
                 </span>
                 <span className={styles.metadataContent}>

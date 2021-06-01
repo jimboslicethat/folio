@@ -1,8 +1,9 @@
-import { Github } from '@styled-icons/boxicons-logos'
-import { CodeAlt, Coffee, Link as LinkIcon, MessageDetail } from '@styled-icons/boxicons-regular'
+import { Icon } from '@chakra-ui/icons'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { BiCodeAlt, BiCoffee, BiMessageDetail, BiLink } from 'react-icons/bi'
+import { GrGithub } from 'react-icons/gr'
 import useSWR from 'swr'
 
 import { container, item } from '../shared/stagger-child-motion'
@@ -37,7 +38,7 @@ export default function Projects(): React.ReactElement {
       >
         <motion.section className={styles.contentSectionLeft} variants={item}>
           <h2 className={styles.sectionTitle}>
-            <Coffee size="36" />
+            <Icon as={BiCoffee} boxSize="36px" />
             &nbsp;Professional
           </h2>
           <hr />
@@ -48,7 +49,7 @@ export default function Projects(): React.ReactElement {
                 <h4>{project.description}</h4>
                 <div className={styles.projectActions}>
                   <a href={project.href} target="_blank" rel="noreferrer">
-                    <LinkIcon size="16" />
+                    <Icon as={BiLink} boxSize="16px" />
                     Visit Product
                   </a>
                   <span
@@ -78,7 +79,7 @@ export default function Projects(): React.ReactElement {
         </motion.section>
         <motion.section className={styles.contentSectionRight} variants={item}>
           <h2 className={styles.sectionTitle}>
-            <Github size="36" />
+            <Icon as={GrGithub} boxSize="36px" />
             &nbsp;Hobby & Open Source
           </h2>
           <hr />
@@ -89,7 +90,7 @@ export default function Projects(): React.ReactElement {
                 <h4>{project.description}</h4>
                 <div className={styles.projectActions}>
                   <a href={project.href} target="_blank" rel="noreferrer">
-                    <CodeAlt size="16" />
+                    <Icon as={BiCodeAlt} boxSize="16px" />
                     View Code
                   </a>
                   <span
@@ -120,7 +121,7 @@ export default function Projects(): React.ReactElement {
       </motion.div>
       <section>
         <h2 className={styles.contactMeHeader}>
-          <MessageDetail size="48" />
+          <Icon as={BiMessageDetail} boxSize="48" />
           To learn even more&nbsp;
           <Link href="/contact-me" passHref>
             <a href="/contact-me" className={styles.contactMeLink}>

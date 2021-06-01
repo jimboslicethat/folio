@@ -1,13 +1,19 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { Github, LinkedinSquare, Twitter } from '@styled-icons/boxicons-logos'
+import { Icon } from '@chakra-ui/react'
+import styled from '@emotion/styled'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
+import { GrGithub, GrLinkedin, GrTwitter } from 'react-icons/gr'
 
 import Meta from 'shared/components/meta'
 import NavBar from 'shared/components/navbar'
 
 import '../styles/globals.css'
+
+const IconLink = styled.a`
+  margin: 4px;
+`
 
 interface Params {
   Component: React.ComponentType
@@ -40,19 +46,19 @@ function MyApp({ Component, pageProps, router }: Params): React.ReactElement {
           </motion.main>
           <footer>
             <div id="footer-content-left">
-              <a href="https://github.com/jimboslicethat" target="_blank" rel="noreferrer">
-                <Github size="40" />
-              </a>
-              <a
+              <IconLink href="https://github.com/jimboslicethat" target="_blank" rel="noreferrer">
+                <Icon as={GrGithub} boxSize="32px" />
+              </IconLink>
+              <IconLink
                 href="https://www.linkedin.com/in/jamesandersonwalsh/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <LinkedinSquare size="40" />
-              </a>
-              <a href="https://twitter.com/jimboslicethat" target="_blank" rel="noreferrer">
-                <Twitter size="40" />
-              </a>
+                <Icon as={GrLinkedin} boxSize="32px" />
+              </IconLink>
+              <IconLink href="https://twitter.com/jimboslicethat" target="_blank" rel="noreferrer">
+                <Icon as={GrTwitter} boxSize="32px" />
+              </IconLink>
             </div>
             <div id="footer-content-right">
               <span>Powered by Next.js and &nbsp;</span>
