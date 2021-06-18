@@ -20,11 +20,8 @@
     "framer-motion": "^4",
     "next": "10.0.0",
     "react": "17.0.1",
-    "react-avatar": "3.9.7",
     "react-dom": "17.0.1",
     "react-icons": "4.2.0",
-    "styled-components": "5.2.1",
-    "styled-icons": "10.25.0",
     "swr": "0.4.0"
   },
   "devDependencies": {
