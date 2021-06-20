@@ -1,9 +1,39 @@
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { Box, IconButton, Flex, Heading, Tooltip, useColorMode, Avatar } from '@chakra-ui/react'
+import {
+  Box,
+  IconButton,
+  Flex,
+  Heading,
+  Tooltip,
+  Text,
+  useColorMode,
+  Avatar,
+  useColorModeValue
+} from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 import React from 'react'
 
+const MotionFlex = motion(Flex)
+const MotionHeading = motion(Heading)
+const MotionAvatar = motion(Avatar)
+const MotionText = motion(Text)
+
+const headingContainerAnimation = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.4
+    }
+  }
+}
+const headerAnimation = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 }
+}
+
 const IndexPage = (): React.ReactElement => {
-  const { colorMode, toggleColorMode } = useColorMode()
+  const { toggleColorMode } = useColorMode()
 
   return (
     <Box width="100vw" height="100vh">
@@ -15,21 +45,59 @@ const IndexPage = (): React.ReactElement => {
         >
           <IconButton
             onClick={toggleColorMode}
-            colorScheme="gray"
+            backgroundColor={useColorModeValue('gray.300', 'gray.700')}
             aria-label="Search database"
             margin="4"
-            icon={colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
+            icon={useColorModeValue(<SunIcon />, <MoonIcon />)}
           />
         </Tooltip>
       </Flex>
-      <Flex alignItems="center" justifyContent="center" flexDirection="column">
-        <Avatar
-          borderRadius="8"
-          src="https://avatars.githubusercontent.com/u/8390638?v=4?size=240"
-          size="2xl"
-          marginBottom="8"
-        />
-        <Heading as="h1">Hey I&apos;m James, and I write code.</Heading>
+      <Flex alignItems="center" flexDirection="column">
+        <MotionFlex
+          variants={headingContainerAnimation}
+          initial="hidden"
+          animate="show"
+          flexDirection="column"
+        >
+          <MotionAvatar
+            borderRadius="8"
+            src="https://avatars.githubusercontent.com/u/8390638?v=4?size=240"
+            size="2xl"
+            marginBottom="8"
+            variants={headerAnimation}
+          />
+          <MotionHeading
+            color={useColorModeValue('blue.600', 'blue.400')}
+            as="h1"
+            size="4xl"
+            marginBottom="1rem"
+            variants={headerAnimation}
+            colorScheme="gray"
+          >
+            Hey, I&apos;m James.
+          </MotionHeading>
+          <MotionHeading
+            color={useColorModeValue('blue.400', 'blue.200')}
+            as="h2"
+            size="3xl"
+            marginBottom="1rem"
+            variants={headerAnimation}
+          >
+            I build user interfaces.
+          </MotionHeading>
+          <MotionText
+            color={useColorModeValue('gray.600', 'gray.500')}
+            fontWeight="500"
+            marginTop="1rem"
+            width="40rem"
+            fontSize="xl"
+            variants={headerAnimation}
+          >
+            I&apos;m a software engineer who specializes in front end web development. Currently,
+            I&apos;m at Podium where I&apos;m building a design system in React that&apos;s focused
+            on accessiblility, simplicity, & atomic design principles.
+          </MotionText>
+        </MotionFlex>
       </Flex>
     </Box>
   )
