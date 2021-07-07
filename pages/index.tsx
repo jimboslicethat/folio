@@ -45,7 +45,7 @@ const IndexPage = (): React.ReactElement => {
         >
           <IconButton
             onClick={toggleColorMode}
-            backgroundColor={useColorModeValue('gray.300', 'gray.700')}
+            backgroundColor={useColorModeValue('gray.100', 'gray.700')}
             aria-label="Search database"
             margin="4"
             icon={useColorModeValue(<SunIcon />, <MoonIcon />)}
@@ -58,14 +58,9 @@ const IndexPage = (): React.ReactElement => {
           initial="hidden"
           animate="show"
           flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
         >
-          <MotionAvatar
-            borderRadius="8"
-            src="https://avatars.githubusercontent.com/u/8390638?v=4?size=240"
-            size="2xl"
-            marginBottom="8"
-            variants={headerAnimation}
-          />
           <MotionHeading
             color={useColorModeValue('blue.600', 'blue.400')}
             as="h1"
@@ -74,28 +69,46 @@ const IndexPage = (): React.ReactElement => {
             variants={headerAnimation}
             colorScheme="gray"
           >
-            Hey, I&apos;m James.
+            James Walsh
           </MotionHeading>
           <MotionHeading
             color={useColorModeValue('blue.400', 'blue.200')}
             as="h2"
-            size="3xl"
+            size="xl"
             marginBottom="1rem"
             variants={headerAnimation}
           >
-            I build user interfaces.
+            UI/UX Software Engineer
           </MotionHeading>
+          <MotionAvatar
+            src="https://avatars.githubusercontent.com/u/8390638?v=4?size=240"
+            size="2xl"
+            marginBottom="8"
+            variants={headerAnimation}
+          />
           <MotionText
             color={useColorModeValue('gray.600', 'gray.500')}
             fontWeight="500"
             marginTop="1rem"
             width="40rem"
             fontSize="xl"
+            textAlign="center"
             variants={headerAnimation}
           >
-            I&apos;m a software engineer who specializes in front end web development. Currently,
-            I&apos;m at Podium where I&apos;m building a design system in React that&apos;s focused
-            on accessiblility, simplicity, & atomic design principles.
+            Hey, I&apos;m James! Welcome to my portfolio.
+          </MotionText>
+          <MotionText
+            color={useColorModeValue('gray.600', 'gray.500')}
+            fontWeight="500"
+            marginTop="1rem"
+            width="40rem"
+            fontSize="xl"
+            textAlign="center"
+            variants={headerAnimation}
+          >
+            I build user interfaces. Currently, I&apos;m at Podium where I&apos;m building a design
+            system in React that&apos;s focused on accessiblility, simplicity, & atomic design
+            principles.
           </MotionText>
         </MotionFlex>
       </Flex>
